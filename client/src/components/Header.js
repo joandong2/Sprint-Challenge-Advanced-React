@@ -9,7 +9,7 @@ const Header = () => {
         <nav className="navbar">
             <p>
                 Sprint Challenge - Advanced React (Web: Unit 3, Sprint 1)
-                {darkMode && <span className="dark-mode-text">Dark Mode</span>}
+                {/* {darkMode && <span className="dark-mode-text">Dark Mode</span>} */}
             </p>
             <div className="dark-mode__toggle">
                 <div
