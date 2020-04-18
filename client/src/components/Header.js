@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+
+import useDarkMode from "../hooks/useToggle.js";
 
 const Header = () => {
-    const [darkMode, setDarkMode] = useState(false);
-    const toggleMode = (e) => {
-        e.preventDefault();
-        setDarkMode(!darkMode);
-    };
+    const [darkMode, setDarkMode] = useDarkMode();
+
     return (
         <nav className="navbar">
-            <p>Sprint Challenge - Advanced React (Web: Unit 3, Sprint 1)</p>
+            <p>
+                Sprint Challenge - Advanced React (Web: Unit 3, Sprint 1)
+                {darkMode && <span className="dark-mode-text">Dark Mode</span>}
+            </p>
             <div className="dark-mode__toggle">
                 <div
-                    onClick={toggleMode}
+                    onClick={setDarkMode}
                     className={darkMode ? "toggle toggled" : "toggle"}
                 />
             </div>
