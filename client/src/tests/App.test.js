@@ -18,12 +18,12 @@ test("renders Header without crashing", () => {
     render(<Players />);
 });
 
-test("Player heading is showing", () => {
+test("check player heading is rendering", () => {
     const { getByText } = render(<Players />);
     getByText(/world cup players/i);
 });
 
-test("toggle button is showing", () => {
+test("check toggle button is showing", () => {
     const { getByTestId } = render(<Header />);
     getByTestId(/toggle/i);
 });
