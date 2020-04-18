@@ -1,30 +1,14 @@
 import React from "react";
 
-import { Table, Row, Col, Button } from "reactstrap";
+const Player = (props) => {
+    return (
+        <div className="player">
+            <p>Rank: {props.player.id + 1}</p>
+            <p>Player: {props.player.name}</p>
+            <p>Country: {props.player.country}</p>
+            <p>Searches: {props.player.searches}</p>
+        </div>
+    );
+};
 
-class TodoList extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            players: [],
-        };
-    }
-
-    componentDidMount() {
-        console.log('component did mount');
-
-        axios.get('http://localhost:5000/api/players')
-            .then(res => {
-                console.log(res);
-            }).catch(err => console.log(err, 'err:'))
-    }
-
-    render() {
-        // console.log(this.state.key);
-        return (
-            
-        );
-    }
-}
-
-export default TodoList;
+export default Player;
