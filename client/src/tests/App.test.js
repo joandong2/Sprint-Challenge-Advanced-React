@@ -15,7 +15,7 @@ test("renders Players without crashing", () => {
 });
 
 test("renders Header without crashing", () => {
-    render(<Players />);
+    render(<Header />);
 });
 
 test("check player heading is rendering", () => {
