@@ -28,20 +28,22 @@ class Players extends React.Component {
     render() {
         return (
             <div className="container">
-                {this.state.players.length > 0 && (
-                    <>
-                        <h1 className="title">Women's World Cup players</h1>
-                        <span className="font-italic">
-                            * players ranked by search interest from Google
-                            Trends
-                        </span>
-                    </>
-                )}
+                <h1 className="title" data-testid="title">
+                    World Cup Players
+                </h1>
+                <span className="font-italic">
+                    * players ranked by search interest from Google Trends
+                </span>
+
                 <div className="row players">
                     {this.state.players.map((player, index) => {
                         return (
                             <div className="col-sm-3" key={player.id}>
-                                <Player key={player.id} player={player} />
+                                <Player
+                                    key={player.id}
+                                    player={player}
+                                    data-testid="player"
+                                />
                             </div>
                         );
                     })}

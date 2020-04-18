@@ -13,6 +13,7 @@ const Header = () => {
             </p>
             <div className="dark-mode__toggle">
                 <div
+                    data-testid="toggle"
                     onClick={setDarkMode}
                     className={darkMode ? "toggle toggled" : "toggle"}
                 />
